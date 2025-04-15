@@ -1,0 +1,13 @@
+name: R12_ioslides_htmlwidget
+title: R12_ioslides_htmlwidget
+username: keboli
+account: keboli
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13529585
+bundleId: 9467095
+url: https://keboli.shinyapps.io/R12_ioslides_htmlwidget/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|Final_presentation.html|Final_presentation.Rmd|index.html|population_bubble_chart.png|population_pie_chart.png|population_square.png|R12_interactive_presentation.html|R12_interactive_presentation.Rmd|Seoultech_LOGO.png|styles.css|fig|myRmdBeamerStyle

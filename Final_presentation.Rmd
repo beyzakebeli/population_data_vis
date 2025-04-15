@@ -1,0 +1,145 @@
+---
+title: 'The Art of Visualization: The Good and the Bad'
+author: "Kebeli Beyza Nur, 23512035"
+subtitle: 데이터 시각화
+output:
+  ioslides_presentation:
+    css: styles.css
+    smaller: true
+  slidy_presentation: default
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(fig.align='center')
+```
+
+
+## Contents
++ Part I. `Bad Visualization`
++ Part II. `Why Are They Bad?`
++ Part III. `Good Alternatives`
++ Part IV. `Why Are They Good?`
+
+
+# Part I. `Bad Visualization`
+
+## Different ways population has been visualized:
++ <b>Pie Chart</b>
+
+```{r, fig.cap="Population of Countries with Pie Chart", echo=FALSE, out.width="70%", out.height="350px", fig.align='center'}
+include_graphics("population_pie_chart.png")
+```
++ Source: https://sranalytics.io/blog/bad-data-visualization-examples/
+
+## Different ways population has been visualized:
++ <b>Bubble Chart</b>
+
+```{r, fig.cap="Population of Countries with Bubble Chart", echo=FALSE, out.width="60%", out.height="330px", fig.align='center'}
+include_graphics("population_bubble_chart.png")
+```
++ Source: https://www.weforum.org/stories/2019/04/the-world-s-7-5-billion-people-in-one-chart/
+
+## Different ways population has been visualized:
++ <b>Square Blocks</b>
+
+```{r, fig.cap="Population of Countries with Square Blocks", echo=FALSE, out.width="60%", out.height="300px", fig.align='center'}
+include_graphics("population_square.png")
+```
++ Source: https://www.weforum.org/stories/2019/04/the-world-s-7-5-billion-people-in-one-chart/
+
+
+# Part II. `Why Are They Bad?`
+
+## Pie Chart
+
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-start;">
+  <img src="population_pie_chart.png" alt="Population of Countries with Pie Chart" style="width: 50%; height: auto; margin-right: 20px;">
+  <div style="flex: 1; min-width: 0; max-width: 65%;">
+  <b>Problems with This Visualization</b>  
+  
+   + The large number of countries in the dataset makes it difficult to display effectively in a pie chart.
+   + Countries with significantly large populations dominate the chart, leaving smaller countries nearly invisible.
+   + The visualization does not allow for easy comparison of countries with similar population sizes.
+   </div>
+</div>
+
+## Bubble Chart
+
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-start;">
+  <img src="population_bubble_chart.png" alt="Population of Countries with Bubble Chart" style="width: 50%; height: auto; margin-right: 20px;">
+  <div style="flex: 1; min-width: 0; max-width: 65%;">
+  <b>Problems with This Visualization</b>  
+  
+   + Some bubbles are not labeled, making it difficult to identify the countries they represent.
+   + Exact population numbers are not visible; you can only make rough comparisons based on bubble size.
+   + The bubble shapes and sizes are hard to make comparisons precisely.
+   </div>
+</div>
+
+## Square Blocks
+
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-start;">
+  <img src="population_square.png" alt="Population of Countries with Bubble Chart" style="width: 50%; height: auto; margin-right: 20px;">
+  <div style="flex: 1; min-width: 0; max-width: 65%;">
+  <b>Problems with This Visualization</b>  
+
+   + Although visually creative, square blocks fail to provide any numerical data, which is crucial for understanding population sizes.
+   + While square blocks are easier to compare in terms of size than bubbles, the differences in population size are still difficult to assess accurately.
+   </div>
+</div>
+
+# Part III. `Good Alternatives`
+
+## Interactive Bar Chart
+
+<iframe src="https://keboli.shinyapps.io/R12_ioslides_htmlwidget/" width="100%" height="500px"></iframe>
+
+<div style="text-align: center;">
+  <iframe src="http://127.0.0.1:3388/" width="800" height="500" style="border: none;"></iframe>
+</div>
+
+## Interactive World Map
+
+<iframe src="https://beyzakebeli.github.io/ioslides-map/" width="100%" height="500px" style="border:none;"></iframe>
+
+# Part IV. `Why Are They Good?`
+
+## What-Why-How Analysis
+<b>1. Interactive Bar Chart</b> 
+
++ <b>What</b>
+
+An interactive bar chart displaying population data by country. It allows users to search, filter, and compare countries or regions based on different attributes.
+
++ <b>Why</b>
+
+To enable dynamic and engaging exploration of population data. 
+
++ <b>How</b>
+
+- The bar chart uses the 2023 World Population Data sourced from the WDI library in R.
+- The countrycode library in R is used to categorize data by continent, making the chart more user-friendly and informative.
+- Interactive features include search functionality, sorting by population size, and hover-over tooltips displaying additional statistics.
+
+
+## What-Why-How Analysis
+<b>2. Interactive World Map</b> 
+
++ <b>What</b>
+
+A dynamic map that visualizes the population data of countries across the globe.
+
++ <b>Why</b>
+
+To provide a geographic perspective of population distribution around the world.
+
++ <b>How</b>
+
+- The world map is built using the same 2023 World Population Data from the WDI library.
+- By clicking or hovering over countries, users can view detailed population numbers.
+
+# Thank you for listening!
+
